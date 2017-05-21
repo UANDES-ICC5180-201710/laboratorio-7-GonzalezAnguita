@@ -7,3 +7,10 @@
 <br>
 
 <%= link_to 'New Student', new_course_enrollment_path(course_id: @course.id) %>
+
+<%= link_to 'New Enrollment Modal', '#', remote: true, 'data-toggle' => 'modal', 'data-target' => '#new_enrollment_modal' %>
+<%= render 'enrollments/new_modal', course: @course %>
+
+
+<%= link_to 'New Person Modal', '#', remote: true, 'data-toggle' => 'modal', 'data-target' => '#new_student_modal' %>
+<%= render 'people/new_modal', course: @course %>
